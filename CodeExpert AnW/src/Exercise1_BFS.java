@@ -41,26 +41,26 @@ public class Exercise1_BFS {
 	          
 	          for (int i = 0; i<m; i++) {
 	            if (edge1[i] == first) {
-	              if ((distance[edge2[i]] == -1) && (!queue.contains(edge2[i]))) {
+	            	
 	                if (discovered[edge2[i]] == false) {
 	                  discovered[edge2[i]] = true;
 	                  distance[edge2[i]] = distance[edge1[i]] + 1;
 	                  queue.add(edge2[i]);
 	                }
-	              }
+	           
 	              edge1[i] = -1;
 	              edge2[i] = -1;
 	            }
 	          }
 	          for (int i = 0; i<m; i++) {
 	            if (edge2[i] == first) {
-	              if ((distance[edge1[i]] == -1) && (!queue.contains(edge1[i]))) {
+	           
 	                if (discovered[edge1[i]] == false) {
 	                  discovered[edge1[i]] = true;
 	                  distance[edge1[i]] = distance[edge2[i]] + 1;
 	                  queue.add(edge1[i]);
 	                }
-	              }
+	              
 	              edge1[i] = -1;
 	              edge2[i] = -1;
 	            }
